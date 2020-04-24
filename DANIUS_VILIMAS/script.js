@@ -1,6 +1,10 @@
-//! Task 1
+//! Task 1 Fixed
 function splitAndMerge(str, sp) {
-    return str.split(' ').join('').split('').join(sp);
+    var arr = str.split(' ');
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].split('').join(sp);
+    }
+    return arr.join(' ');
 }
 
 console.log(splitAndMerge("My name is John", " "));
